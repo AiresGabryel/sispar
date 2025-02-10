@@ -1,14 +1,15 @@
-import Capa from "../../assets/Tela Login/Imagem tela de login.png"
+//como vai ser bakcground, n precisa importar import Capa from "../../assets/Tela Login/Imagem tela de login.png"
 import Logo from "../../assets/Tela Login/logo-ws.png"
+import styles from "./Login.module.scss"
 
 function Login(){
     return(
         <main>
-        <section>
+        <section className={styles.containerImagem}>
             <p>Reservado para imagem</p>
         </section>
 
-        <section>
+        <section className={styles.containerForm}>
             <img src={Logo} alt="Logo SISPAR"/>
             <h1>Boas vindas ao Novo Portal SISPAR</h1>
             <p>Sistema de Emissão de Boletos e Parcelamento</p>
@@ -24,8 +25,8 @@ function Login(){
             <a href="">Esqueci minha senha</a>
             
             <div>
-            <button>Entrar</button>
-            <button>Criar conta</button>
+            <button className={styles.buttonEntrar}>Entrar</button>
+            <button className={styles.buttonCriar}>Criar conta</button>
             </div>
 
             </form>
