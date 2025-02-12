@@ -1,8 +1,15 @@
 //como vai ser bakcground, n precisa importar import Capa from "../../assets/Tela Login/Imagem tela de login.png"
+import {useNavigate} from "react-router-dom"
 import Logo from "../../assets/Tela Login/logo-ws.png"
 import styles from "./Login.module.scss"
 
 function Login(){
+const navigate = useNavigate() // iniciando o hook useNavigate
+
+const irParaReembolsos = () => {
+    navigate("/reembolsos"); // função para navegar para a página de reembolsos
+};
+
     return(
         <main>
         <section className={styles.containerImagem}>
@@ -25,7 +32,7 @@ function Login(){
             <a href="">Esqueci minha senha</a>
             
             <div>
-            <button className={styles.buttonEntrar}>Entrar</button>
+            <button onClick={irParaReembolsos} className={styles.buttonEntrar}>Entrar</button>
             <button className={styles.buttonCriar}>Criar conta</button>
             </div>
 
