@@ -1,16 +1,15 @@
-main{
-    display: flex;
+main {
+  display: flex;
 }
 
-.containerImagem{
-
-    //border: solid red;
-    background-image: url("../../assets/Tela\ Login/imagem tela de login.png");
-    height: 100vh;
-    width: 60%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
+.containerImagem {
+  //border: solid red;
+  background-image: url("../../assets/Tela\ Login/imagem tela de login.png");
+  height: 100vh;
+  width: 60%;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: center;
 }
 
 .containerForm{
@@ -21,14 +20,14 @@ main{
     align-items: center;
     justify-content: center;
     h1{
-        border: solid red;
+        //border: solid red;
         width: 37%;
         font-size: 2rem;
         text-align: center;
     }
 }
 
-form{
+.formLogin{
     //border: solid green;
     display: flex;
     flex-direction: column;
@@ -41,24 +40,27 @@ form{
         height: 5vh;
         border-radius: 6px;
     }
+
     div{
         //border: solid red;
         width: 50%;
         display: flex;
         justify-content: space-evenly;
-        .buttonEntrar
-        {
+
+        .buttonEntrar{
             background-color: pink;
             width: 6vw;
-            height: 5vh;
-            border-radius: 6px;}
+            height: 5vh ;
+            border-radius: 6px;
+        }
+
         .buttonCriar{
             background-color: violet;
             width: 6vw;
-            height: 5vh;
+            height: 5vh ;
             border-radius: 6px;
         }
-    };
+
+
+    }
 }
-
-
