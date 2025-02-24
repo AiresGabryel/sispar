@@ -4,7 +4,7 @@
 }
 
 .headerSolicitacao{
-    border: solid red;
+  //  border: solid red;
     display: flex;
     width: 20vw;
 }
@@ -15,6 +15,8 @@
 
 .mainSolicitacao{
 width: 100%;
+display: flex;
+flex-direction: column;
 }
 
 .formSolicitacao{
@@ -28,7 +30,7 @@ justify-content: space-between;
 input, select, textarea{
     border-radius: 6px;
     border: solid #CBD4E1 0.8px;
-    height: 3vh;
+    height: 4vh;
     width: 100%;
 }
 
@@ -46,7 +48,7 @@ textarea{
 
 .grupo1{
  //border: solid;
-    width: 40%;
+    width: 35%;
     height: 25vh;
     display: flex;
     flex-wrap: wrap;
@@ -86,7 +88,74 @@ textarea{
 //Estilizção do grupo 2
 
 .grupo2{
-    width: 55%;
+    width: 60%;
     height: 25vh;
-    border: solid red;
+    //border: solid red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.inputData{
+    //border: solid green;
+    width: 25%;
+}
+
+.despesas{
+   // border: solid blue;
+    width: 30%;
+}
+
+.centroDeCusto{
+    //border: solid purple;
+    width: 40%;
+}
+
+.ordem, .divisoes, .pep, .distancia{
+   // border: solid orange;
+    width:8%;
+}
+
+.moeda, .valorKm, .valorFaturado, .despesa{
+//border: solid rgb(16, 137, 80);
+width: 11%;
+}
+
+.botoes{
+    width: 15%;
+    //border: solid red;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.botaoSalvar{
+background-color: #001A3D;
+color: #ffffff;
+width: 5vw;
+}
+
+.botaoDeletar{
+background-color: #00BEDD;
+color: #ffffff;
+width: 2vw;
+}
+
+//Estilização da tabela
+
+table{
+    width: 100%;
+    border: solid;
+    border-collapse: collapse;
+
+}
+th{
+    background-color: #CBD4E1;
+    font-weight: 400;
+    font-size: 1rem;
+}
+td, th{
+    border: solid #F1F4F9 0.8px;
+    text-align: center;
 }
