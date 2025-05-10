@@ -1,0 +1,109 @@
+.containerImagem {
+    //border: solid;
+
+    img {
+        height: 100%;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: 100%;
+        //border: solid;
+    }
+}
+
+.mainLogin {
+    display: flex;
+    flex-direction: center;   
+   // background-color: pink;
+    height: 100vh;   
+}
+
+.containerForms {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    img{//border: solid;
+    margin-bottom:1rem ;}
+
+    h1 {
+        //border: solid red;
+        width: 50%;
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 8px;
+    }
+
+    p {
+        margin-bottom: 2rem;
+        font-weight: bold;
+        color: #0844c4;
+    } 
+
+}
+
+.formLogin {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    height: 20vh;
+    
+    input {
+        width: 80%;
+        border-radius: 6px;
+        border: 1px solid #f1f4f9;
+        margin-bottom: 0.5vh;
+    }
+    input::placeholder{
+    color: rgba(0, 0, 0, 0.5); // Cor padrão (preto com 50% de opacidade)
+    transition: color 0.3s ease-in-out; // Efeito suave na transição
+    }
+
+    input:hover::placeholder{
+        color: #fff; //QUando passar o mouse, ele apaga
+    }
+
+    input:hover {
+        border-color: #23282f;
+    }
+
+    //primeiro e segundo px: profundade, terceito px: esmaecimento, o quanto px: profundidade
+    input:focus {
+        border-color: #fff;
+        box-shadow: 00px 0px 5px 1px #cbd4E1;
+        }
+        
+        div {
+            width: 50%;
+            display: flex;
+            justify-content: space-evenly;
+            
+
+            .buttonEntrar {
+                border: #001A3D;
+                background-color: #001A3D;
+                color: white;
+                font-weight: bold;
+                width: 6vw;
+                height: 5vh;
+                border-radius: 6px;
+                margin-top: 2rem;
+                
+            }
+
+            .buttonCriar {
+                border: #00BEDD;
+                background-color: #00BEDD;
+                color: white;
+                font-weight: bold;
+                width: 6vw;
+                height: 5vh;
+                border-radius: 6px;
+                margin-top: 2rem;
+                
+            }
+        }
+    }
