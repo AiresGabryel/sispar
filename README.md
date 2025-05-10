@@ -1,14 +1,8 @@
-# SISPAR - Sistema de Gestão de Despesas 💸
-
-Bem-vindo à documentação oficial do **SISPAR**, um sistema de gestão de reembolsos e despesas desenvolvido com foco em modularidade, usabilidade e escalabilidade. 🧠🧩
-
-
-## 🧠 Visão Geral
+# SISPAR - Sistema de Gestão de Despesas
 
 O **SISPAR** é um sistema React moderno para controle e solicitação de reembolsos, permitindo que usuários insiram valores, datas, categorias e visualizem seus lançamentos em uma tabela organizada com resumos dinâmicos.
 
-Ele foi desenvolvido com:
-
+Foi desenvolvido com:
 - React 19.1.0 ⚛️
 - Vite ⚡
 - SCSS Modules 🎨
@@ -18,8 +12,6 @@ Ele foi desenvolvido com:
 - ESLint customizado para manter qualidade de código 🧼
 
 ---
-
-
 
 
 ## Desafio FINAL - Construção de Interface para o Projeto "SISPAR"
@@ -35,44 +27,44 @@ Neste desafio, começaremos pelo Front-end (toda a parte visual) e concluiremos 
 
 ## 1. Tela de Login
 
-✅Funcionalidades:
+Funcionalidades:
 🔹 Ao clicar no botão "ENTRAR" , o usuário deve ser redirecionado para a Tela de reembolsos.
 🔹 O botão deve conter a rota que direciona corretamente para a tela reembolsos. 
 
 ## 2. Tela de Reembolsos
 
-✅ Funcionalidades:
+Funcionalidades:
  🔹 A tela será parcialmente estática, sem interações ou atualizações dinâmicas.
  🔹 O card "Solicitar Reembolso" deve redirecionar para a tela de Solicitação de Reembolsos.
 
 ## 3. Tela de Solicitação de Reembolsos
 
-✅ Funcionalidades: 
+Funcionalidades: 
 🔹 Os campos de input devem funcionar corretamente para receber e armazenar os dados inseridos pelo usuário. 
 🔹 Implementar um armazenamento temporário para os dados (pode ser um array ou um objeto, simulando uma "task list").
 
 ## 4. NavBar (Navegação)
 
-✅ Funcionalidades:
- 🔹 Ícones de navegação: Cada ícone deve levar o usuário para a respectiva tela. 
+Funcionalidades:
+🔹 Ícones de navegação: Cada ícone deve levar o usuário para a respectiva tela. 
 🔹 Menu Hambúrguer: Deve permitir abrir e fechar a barra de navegação. 
 🔹 Home: Redireciona para a Tela de Reembolsos. 
 🔹 Solicitação: Redireciona para a Tela de Solicitação de Reembolsos. 
 🔹 Logout: Faz o logout, levando o usuário de volta à Tela de Início.
 
-## 🧱 Componentes e Suas Funções
+## Componentes
 
-- **Breadcrumb** 🧭: Navegação hierárquica do sistema.
-- **Login/Forms** 🔐: Tela de login com formulário estilizado.
-- **Modal** 📦: Confirmação de ações críticas.
-- **Navbar** 🧭: Barra de navegação principal.
-- **Dashboard/Cards** 📊: Resumo visual dos reembolsos.
-- **BoxDate** 📅: Seleção de intervalo de datas.
-- **BoxInfos** 🧾: Informações adicionais sobre o solicitante.
-- **FormContainer** 🧰: Agrupamento de todos os campos de entrada.
-- **SummarySection** 📌: Resumo dos dados inseridos.
-- **Table** 🗂️: Listagem dos reembolsos adicionados.
-- **Values** 💵: Campos para inserção de valores.
+- **Breadcrumb** : Navegação hierárquica do sistema.
+- **Login/Forms** : Tela de login com formulário estilizado.
+- **Modal** : Confirmação de ações críticas.
+- **Navbar** : Barra de navegação principal.
+- **Dashboard/Cards** : Resumo visual dos reembolsos.
+- **BoxDate** : Seleção de intervalo de datas.
+- **BoxInfos** : Informações adicionais sobre o solicitante.
+- **FormContainer** : Agrupamento de todos os campos de entrada.
+- **SummarySection** : Resumo dos dados inseridos.
+- **Table** : Listagem dos reembolsos adicionados.
+- **Values** : Campos para inserção de valores.
 
 
 ---
@@ -87,7 +79,7 @@ Neste desafio, começaremos pelo Front-end (toda a parte visual) e concluiremos 
 
 ---
 
-## 🎨 Estilização com SCSS Modules
+##  Estilização com SCSS Modules
 
 O projeto usa **SCSS Modules** para escopo isolado por componente, evitando conflitos de classes e permitindo customização mais controlada.
 
@@ -111,7 +103,7 @@ import styles from "./BoxDate.module.scss";
 
 ---
 
-## 🧰 Bibliotecas Utilizadas
+##  Bibliotecas Utilizadas
 
 - **React Router DOM v7** → Roteamento SPA
 - **UUID** → Geração de identificadores únicos
@@ -120,7 +112,7 @@ import styles from "./BoxDate.module.scss";
 
 ---
 
-## 💾 Persistência com localStorage
+## Persistência com localStorage
 
 Todos os dados de reembolso são salvos no `localStorage` usando `JSON.stringify` e recuperados com `JSON.parse`. Isso permite que os dados persistam mesmo após recarregar a página.
 
@@ -128,18 +120,6 @@ Todos os dados de reembolso são salvos no `localStorage` usando `JSON.stringify
 localStorage.setItem("reembolsos", JSON.stringify(data));
 const reembolsos = JSON.parse(localStorage.getItem("reembolsos"));
 ```
-
----
-
-## ✅ Boas Práticas Adotadas
-
-- Separação de responsabilidades por componente
-- Modularização dos estilos (SCSS Modules)
-- Reutilização de componentes
-- Uso de identificadores únicos com UUID
-- ESLint configurado para manter boas práticas de código
-- Semântica de HTML mantida com `aria-labels` e elementos apropriados
-- Limpeza de código e consistência no uso de hooks
 
 ---
 
@@ -190,14 +170,6 @@ npm run build
 npm run preview
 ```
 
----
-
-## 📂 Estrutura de Pastas
-
-```
-(NULL)
-
-```
 ## Materiais de Apoio
 Protótipo no Figma:
 O design da interface está disponível no Figma e pode ser utilizado como guia para a implementação:
