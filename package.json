@@ -1,5 +1,5 @@
 {
-  "name": "sispar-t3",
+  "name": "sispar",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,10 +10,11 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "axios": "^1.8.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.1.5",
-    "sass": "^1.83.4"
+    "sass": "^1.84.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",

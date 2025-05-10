@@ -1,83 +1,93 @@
-import Home from "../../assets/Dashboard/home.png";
-import Seta from "../../assets/Dashboard/Vector.png";
-import Solicitar from "../../assets/Dashboard/Solicitar - Reembolso.png";
-import Analise from "../../assets/Dashboard/Análises.png";
-import Historico from "../../assets/Dashboard/Solicitar - Histórico.png";
-import NumeroAnalises from "../../assets/Dashboard/N-Análises.png";
-import NumeroAprovados from "../../assets/Dashboard/N-Aprovados.png";
-import NumeroRejeitados from "../../assets/Dashboard/N-Rejeitados.png";
-import NumeroSolicitados from "../../assets/Dashboard/N-Solicitados.png";
-import styles from "./Reembolsos.module.scss";
-import NavBar from "../navbar/NavBar.jsx";
-
+import styles from "./Reembolsos.module.scss"
+import Home from "../../assets/Dashboard/home header.png"
+import Seta from "../../assets/Dashboard/Vector.png"
+import Análise from "../../assets/Dashboard/Análises.png"
+import NumeroAnálise from "../../assets/Dashboard/N-Análises.png"
+import NumeroAprovados from "../../assets/Dashboard/N-Aprovados.png"
+import NumeroRejeitados from "../../assets/Dashboard/N-Rejeitados.png"
+import NumeroSolicitados from "../../assets/Dashboard/N-Solicitados.png"
+import SisAtualizado from "../../assets/Dashboard/Sistema-atualizado.png"
+import SolicitarHistorico from "../../assets/Dashboard/SolicitarHistórico.png"
+import SolicitarReembolso from "../../assets/Dashboard/SolicitarReembolso.png"
+import SistemaAtualizado from "../../assets/Dashboard/Sistema-atualizado.png"
+import { useNavigate } from "react-router-dom"
+//importando NavBar
+import NavBar from "../navbar/NavBar.jsx"
 function Reembolsos() {
-  return (
+
+    const navigate = useNavigate()
     
-    <div className={styles.containerReembolsos}>
-      <NavBar />
+    return (
+        <div className={styles.container} >
+            <NavBar />
 
-      <div>
-      <header>
-        <img src={Home} alt="Casinha da header" />
-        <img src={Seta} alt="Setinha da header" />
-        <p>Reembolsos</p>
-      </header>
-      <main className={styles.mainReembolsos}>
-       <div>
-         <h1>Sistema de Reembolsos</h1>
-        <p>
-          Solicite novos pedidos de reembolso, visualize solicitações em análise
-          e todo o histórico.
-        </p>
-       </div>
-       
+            <main className={styles.mainReembolsos}>
 
-        <section className={styles.containerCards}>
-          <article>
-            <img src={Solicitar} alt="" />
-            <h3>Solicitar Reembolso</h3>
-          </article>
+                <header className={styles.headerReembolso}>
+                    <img src={Home} alt="Casinha Header" />
+                    <img src={Seta} alt="seta indicativa ao reembolsos" />
+                    <p>Reembolsos</p>
+                </header>
 
-          <article>
-            <img src={Analise} alt="" />
-            <h3>Verificar análises</h3>
-          </article>
 
-          <article>
-            <img src={Historico} alt="" />
-            <h3>Histórico</h3>
-          </article>
-        </section>
+                <div className={styles.sisRem}>
+                    <h1>Sistema de Reembolsos</h1>
+                    <p>Solicite novos pedidos de reembolso, vizualize solicitações em alálise e todo o histórico.</p>
+                </div>
 
-        <section className={styles.containerStatus}>
-          <div>
-            <img className={styles.imgSolicitados} src={NumeroSolicitados} alt="" />
-            <h4>182</h4>
-            <p>Solicitados</p>
-          </div>
+                <section className={styles.containerCards}>
 
-          <div>
-            <img className={styles.imgAnalises} src={NumeroAnalises} alt="" />
-            <h4>74</h4>
-            <p>Em análise</p>
-          </div>
+                    <article className={styles.card} onClick={() => navigate("/solicitacao")} >
+                        <img src={SolicitarReembolso} alt="" />
+                        <p>Solicitar Reembolso</p>
+                    </article>
 
-          <div>
-            <img className={styles.imgAprovados} src={NumeroAprovados} alt="" />
-            <h4>195</h4>
-            <p>Aprovados</p>
-          </div>
+                    <article className={styles.card}>
+                        <img src={Análise} alt="Análise do reembolso" />
+                        <p>Verificar Análises</p>
+                    </article>
 
-          <div>
-            <img className={styles.imgAnalises} src={NumeroRejeitados} alt="" />
-            <h4>41</h4>
-            <p>Rejeitados</p>
-          </div>
+                    <article className={styles.card}>
+                        <img src={SolicitarHistorico} alt="" />
+                        <p>Histórico</p>
+                    </article>
+                </section>
 
-        </section>
-      </main>
-      </div>
-    </div>
-  );
+                <section className={styles.containerStatus}>
+                    <div>
+                        <img className={styles.imgSolicitados} src={NumeroSolicitados} alt="" />
+                        <h4>182</h4>
+                        <p>Solicitados</p>
+                    </div>
+
+                    <div>
+                        <img className={styles.imgAnalises} src={NumeroAnálise} alt="" />
+                        <h4>74</h4>
+                        <p>Em análise</p>
+                    </div>
+
+                    <div>
+                        <img className={styles.imgAprovados} src={NumeroAprovados} alt="" />
+                        <h4>195</h4>
+                        <p>Aprovados</p>
+                    </div>
+
+                    <div>
+                        <img className={styles.imgRejeitados} src={NumeroRejeitados} alt="" />
+                        <h4>41</h4>
+                        <p>Rejeitados</p>
+                    </div>
+                </section>
+
+                <section className={styles.containerSistema}>
+                    <img src={SistemaAtualizado} alt="logo Sistema atualuzado" />
+                    <a href="">Sistema Atualizado</a>
+                </section>
+            </main>
+        </div>
+
+         
+    );
 }
+
 export default Reembolsos;

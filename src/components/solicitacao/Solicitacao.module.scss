@@ -1,161 +1,303 @@
-.containerPrincipalSolicitacao{
-    //border: solid blue;
-    width: 95vw;
+.layoutSolicitacao {
+  display: flex;
+  width: 100vw;
+  height: 95vh;
 }
 
-.headerSolicitacao{
-  //  border: solid red;
-    display: flex;
-    width: 20vw;
+.containerPrincipalSolicitacao {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+ // border: solid;
+  padding-left: 6%;
 }
 
-.layoutSolicitacao{
-    display: flex;
+.headerSolicitacao {
+  width: 100%;
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  //border: solid;
+  gap: 1rem;
 }
 
-.mainSolicitacao{
-width: 100%;
-display: flex;
-flex-direction: column;
+.mainSolicitacao {
+ // border: solid blue;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
 }
 
-.formSolicitacao{
-width: 100%;
-display: flex;
-justify-content: space-between;
+.formSolicitacao {
+  width: 100%;
+  //border: solid red;
+  display: flex;
+  justify-content: space-between;
+  padding-top:1%;
 }
 
-//Estilização padrão para inputs, textarea, select e label
+ /*  input:hover {
+        border-color: #23282f;
+    }
 
-input, select, textarea{
-    border-radius: 6px;
-    border: solid #CBD4E1 0.8px;
-    height: 4vh;
-    width: 100%;
+    //primeiro e segundo px: profundade, terceito px: esmaecimento, o quanto px: profundidade
+    input:focus {
+        border-color: #fff;
+        box-shadow: 00px 0px 5px 1px #cbd4E1;
+        }*/
+
+// estilização input/label/textarea
+
+label {
+  font-weight: 700;
+  font-size: 1rem;
+  color: #23282f;
 }
 
-label{
-    color: #23282F;
-    font-weight: 700;
-    font-size: 1rem;
+input,
+select,
+textarea {
+  border-radius: 6px;
+  border: solid #cbd4e1 0.8px;
+  height: 5vh;
+  width: 100%;
+
+  &:hover {
+    border-color: #23282f;
 }
 
-textarea{
-    height: 10vh;
+//primeiro e segundo px: profundade, terceito px: esmaecimento, o quanto px: profundidade
+  &:focus {
+    border-color: #fff;
+    box-shadow: 00px 0px 5px 1px #cbd4E1;
+    }
+
+
 }
 
-//Estilização do grupo 1
+//estilização grupo1
+.grupo1 {
+  //border: solid yellow;
+  width: 37%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  //align-items: center;
+  flex-wrap: wrap;
+}
 
-.grupo1{
- //border: solid;
-    width: 35%;
-    height: 25vh;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+.inputNome {
+  width: 45%;
+}
+
+.inputEmpresa {
+  width: 25%;
+}
+
+.inputPrestacao {
+  width: 25%;
+}
+
+.inputMotivo {
+  width: 100%;
 }
 
 
-.inputNome{
-   // border: solid purple;
-    width: 45%;
+
+//Barra vertical
+
+.barraVertical {
+  // border: solid red;
+  background-color: #cbd4e1;
+  height: 20vh;
+  width: 0.1vw;
+  display: flex;
 }
 
-.inputEmpresa{
-   // border: solid blue;
-    width: 25%;
+
+// estilização do grupo 2
+
+.grupo2 {
+
+  //border: solid red;
+  width: 60%;
+  height: 20vh;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
 }
 
-.inputPrestacao{
-   // border: solid orange;
-    width: 25%;
+.inputData {
+  //border: solid;
+  position: relative;
+  width: 20%;
 }
 
-.inputMotivo{
-   // border: solid green;
-    width: 100%;
+.imgData {
+  background-color: #001a3d; 
+  position: absolute;
+  right: 0px; 
+  top: 52%;
+  transform: translateY(-50%); 
+  padding: 0.57rem;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  pointer-events: none; 
 }
 
-//Estilização da barra vertical
 
-.barraVertical{
-    width: 0.1vw;
-    border: solid #CBD4E1 1px;
-    height: 25vh;
+.tipoDeDespesa {
+  //border: solid;
+  width: 31%;
+  position: relative; 
 }
 
-//Estilizção do grupo 2
-
-.grupo2{
-    width: 60%;
-    height: 25vh;
-    //border: solid red;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+.imgDespesa {
+  background-color: #001a3d; 
+  position: absolute;
+  right: 0px;   
+  top: 27%; 
+  padding: 0.57rem;
+  border-top-right-radius: 6px; 
+  border-bottom-right-radius: 6px;
+  pointer-events: none;  
 }
 
-.inputData{
-    //border: solid green;
-    width: 25%;
+
+
+
+.centroDeCusto {
+  position:relative;
+  width: 43%;
 }
 
-.despesas{
-   // border: solid blue;
-    width: 30%;
+.imgCustos {
+  position: absolute;
+  right: 0px;
+  top: 48%;
+  transform: translateY(-40%);
+  padding: 0.53rem;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  background-color: #001a3d;
+  pointer-events: none;
 }
 
-.centroDeCusto{
-    //border: solid purple;
+.ordem,
+.divisoes,
+.pep,
+.distancia {
+  //border: solid;
+  width: 9%;  
+}
+
+
+.moeda,
+.valorKM,
+.valorFaturado,
+.despesa {
+  //border: solid blue;
+  width: 12%;
+}
+
+.botoes {
+  //border: solid;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 19px;
+
+  .botaoSalvar {
+    width: 50%;
+    background-color: #001a3d;
+    color: #ffff;
+
+  }
+
+  .customerDelete {
     width: 40%;
+    background-color: #00BEDD;
+  }
 }
 
-.ordem, .divisoes, .pep, .distancia{
-   // border: solid orange;
-    width:8%;
+.containerTable{
+  margin-top: 1rem;
+  height: 60vh;
+  border: solid, #cbd4e1 1px;
+  border-radius: 2px;
 }
 
-.moeda, .valorKm, .valorFaturado, .despesa{
-//border: solid rgb(16, 137, 80);
-width: 11%;
-}
-
-.botoes{
-    width: 15%;
-    //border: solid red;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-}
-
-.botaoSalvar{
-background-color: #001A3D;
-color: #ffffff;
-width: 5vw;
-}
-
-.botaoDeletar{
-background-color: #00BEDD;
-color: #ffffff;
-width: 2vw;
-}
-
-//Estilização da tabela
-
-table{
-    width: 100%;
-    border: solid;
-    border-collapse: collapse;
+table {
+  
+  width: 100%;
+  font-size: 1rem;
+  border-collapse: collapse;
+  border-radius: 6px;
 
 }
-th{
-    background-color: #CBD4E1;
-    font-weight: 400;
-    font-size: 1rem;
+
+th {
+  background-color:#F1F4F9;
+  font-weight: 400;
+  color: #23282f;
+  text-align: center;
+
 }
-td, th{
-    border: solid #F1F4F9 0.8px;
-    text-align: center;
+
+table,
+th,
+td {
+  height: 5vh;
+  border: solid 1px #cbd4e1;
+  text-align: center;
 }
+table tr:hover {
+  background-color: #f1f4f9; 
+  cursor: pointer; 
+  transition: background-color 0.3s ease; 
+}
+
+.containerFooter{
+  width: 100%;
+  height: 7.5vh;
+  align-items: center;
+  //border: solid;
+  display: flex;
+  justify-content:  flex-end;
+  gap: 1rem;
+  margin-top: -3rem;
+  padding-top: 3%;
+  
+}
+.inputFooterFaturado,
+.inputFooterDespesa{
+  //border: solid;
+  width: 7.5vw;
+  height: 6.85vh;
+}
+
+.buttonCheck,
+.buttonX{
+  //border: solid;
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  width: 13.28vw;
+  height: 5.0vh;
+  margin-top: 1.5rem;
+}
+
+.buttonCheck{
+  color: #FFFF;
+  background-color: #001a3d;
+}
+
+.buttonX{
+  color: #FFFF;
+  background-color: #a60b2f;
+}
+

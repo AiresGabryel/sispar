@@ -1,69 +1,84 @@
-import styles from "./NavBar.module.scss";
-import Historico from "../../assets/Header/Botão - Histórico.png";
-import Home from "../../assets/Header/botão - Home.png";
-import Pesquisa from "../../assets/Header/Botão - Pesquisa.png";
-import Reembolso from "../../assets/Header/Botão - Reembolso.png";
-import Sair from "../../assets/Header/Botão - Sair.png";
-import Perfil from "../../assets/Header/image.png";
-import Fechar from "../../assets/Header/imagem-fechar-header.png";
-import { useNavigate } from "react-router-dom";
+import Home from "../../assets/Header/botão - Home.png"
+import Historico from "../../assets/Header/Botão - Histórico.png"
+import Pesquisa from "../../assets/Header/Botão - Pesquisa.png"
+import Reembolso from "../../assets/Header/Botão - Reembolso.png"
+import Sair from "../../assets/Header/Botão - Sair.png"
+import People from "../../assets/Header/MePeople.jpeg"
+import FecharHearder from "../../assets/Header/imagem-fechar-header.png"
+import styles from "./NavBar.module.scss"
+import { useNavigate } from "react-router-dom"
+import { useState } from "react"
+
 
 function NavBar() {
-  const navigate = useNavigate();
 
-  return (
-    <nav className={styles.navBarEstilo}>
-      <button>
-        <img src={Fechar} alt="imagem abrir e fechar" />
-      </button>
+    const navigate = useNavigate()
+    const [status, setStatus] = useState("fechado")
 
-      <section>
-        <img src={Perfil} alt="imagem do perfil" />
+    function click() {
+        if (status === "fechado") {
+            setStatus("aberto")
+        }
+        else {
+            setStatus("fechado")
+        }
+    }
 
-        <div className={styles.boxButton}>
-          <button
-            onClick={() => {
-              navigate("/reembolsos");
-            }}
-          >
-            <img src={Home} alt="imagem Home" />
-          </button>
+    return (
+        <nav className={`${styles.navBarEstilo} ${styles[status]}`}>
+            <button onClick={() => click()}>
+                <img src={FecharHearder} alt="Botão abrir e fechar" />
+            </button>
 
-          <button
-            onClick={() => {
-              navigate("/solicitacao");
-            }}
-          >
-            <img src={Reembolso} alt="imagem Reembolso" />
-          </button>
+            <section>
+                <div className={styles.navbarPeople}>
+                <img src={People} alt="Foto Perfil" />
+                
+                <h2>GABRIEL SILVANO</h2>
+                <p>Comercio exterior</p>
+                </div>
 
-          <button
-            onClick={() => {
-              navigate("/reembolsos");
-            }}
-          >
-            <img src={Pesquisa} alt="imagem Pesquisa" />
-          </button>
+                <div className={styles.containerNavbar}> 
 
-          <button
-            onClick={() => {
-              navigate("/solicitacao");
-            }}
-          >
-            <img src={Historico} alt="imagem Reembolso" />
-          </button>
-        </div>
-      </section>
+                    <div className={styles.buttonNav}>
+                    <button onClick={() => {
+                        navigate("/reembolsos");
+                    }}>
+                        <img src={Home} alt="Botão do Home" />
+                    </button>
+                    <p>Inicio</p>
+                    </div>
 
-      <button
-        className={styles.buttonSair}
-        onClick={() => {
-          navigate("/");
-        }}
-      >
-        <img src={Sair} alt="imagem sair" />
-      </button>
-    </nav>
-  );
+                    <div className={styles.buttonNav}>
+                    <button onClick={() => { navigate("/reembolsos") }}aria-label="Ir para a página de Reembolsos">
+                        <img src={Reembolso} alt="Botão Reembolso" />
+                    </button>
+                    <p>Reembolsos</p>
+                    </div>
+
+                    <div className={styles.buttonNav}>
+                    <button onClick={() => { navigate("/reembolsos") }}>
+                        <img src={Pesquisa} alt="Botão Pesquisa" />
+                    </button>
+                    <p>Pesquisa</p>
+                    </div>
+
+                    <div className={styles.buttonNav}>
+                    <button onClick={() => { navigate("/solicitacao") }}>
+                        <img src={Historico} alt="Botão Histórico" />
+                    </button>
+                    <p>Histórico</p>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <button className={styles.buttonSair} onClick={() => { navigate("/") }}>
+                <img src={Sair} alt="Botão Sair" />
+            </button>
+        </nav>
+    );
 }
+
 export default NavBar;
