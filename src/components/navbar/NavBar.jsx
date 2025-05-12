@@ -3,7 +3,7 @@ import Historico from "../../assets/Header/Botão - Histórico.png"
 import Pesquisa from "../../assets/Header/Botão - Pesquisa.png"
 import Reembolso from "../../assets/Header/Botão - Reembolso.png"
 import Sair from "../../assets/Header/Botão - Sair.png"
-import People from "../../assets/Header/Botão - Sair.png""
+
 import FecharHearder from "../../assets/Header/imagem-fechar-header.png"
 import styles from "./NavBar.module.scss"
 import { useNavigate } from "react-router-dom"
@@ -31,11 +31,9 @@ function NavBar() {
             </button>
 
             <section>
-                <div className={styles.navbarPeople}>
-                <img src={People} alt="Foto Perfil" />
-                
-                <h2>GABRIEL SILVANO</h2>
-                <p>Comercio exterior</p>
+                <div>
+                <h2>GABRYEL AIRES</h2>
+                <p>Análise e desenvolvimento de sistemas</p>
                 </div>
 
                 <div className={styles.containerNavbar}> 
