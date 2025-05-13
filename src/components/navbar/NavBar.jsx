@@ -31,10 +31,12 @@ function NavBar() {
             </button>
 
             <section>
-                <div>
+                <div className={styles.navbarPeople}>
+                <img src={People} alt="Foto Perfil" />
+                
                 <h2>GABRYEL AIRES</h2>
-                <p>Análise e desenvolvimento de sistemas</p>
-                </div>
+                <p>ANÁLISE E DESENVOLVIMENTO DE SISTEMAS</p>
+                <div>
 
                 <div className={styles.containerNavbar}> 
 
