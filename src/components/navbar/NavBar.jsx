@@ -3,7 +3,7 @@ import Historico from "../../assets/Header/Botão - Histórico.png"
 import Pesquisa from "../../assets/Header/Botão - Pesquisa.png"
 import Reembolso from "../../assets/Header/Botão - Reembolso.png"
 import Sair from "../../assets/Header/Botão - Sair.png"
-
+import People from "../../assets/Header/MePeople.jpeg
 import FecharHearder from "../../assets/Header/imagem-fechar-header.png"
 import styles from "./NavBar.module.scss"
 import { useNavigate } from "react-router-dom"
