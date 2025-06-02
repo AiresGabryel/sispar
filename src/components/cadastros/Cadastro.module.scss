@@ -1,0 +1,158 @@
+.mainCadastro {
+  display: flex;
+  flex-direction: row;
+  height: 100vh;
+}
+
+.containerImagem {
+  width: 50%;
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.containerForms {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  overflow-y: auto;
+
+  img {
+    margin-bottom: 1rem;
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+
+  p {
+    margin-bottom: 1.5rem;
+    font-weight: bold;
+    color: #0844c4;
+    text-align: center;
+    font-size: 0.9rem;
+  }
+}
+
+.formCadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  gap: 0.8rem;
+
+  input {
+    width: 100%;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+
+  input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+    transition: color 0.3s ease-in-out;
+  }
+
+  input:hover::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  input:hover {
+    border-color: #0844c4;
+  }
+
+  input:focus {
+    border-color: #001A3D;
+    box-shadow: 0px 0px 5px 1px #cbd4e1;
+  }
+
+  div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
+    margin-top: 1rem;
+
+    .buttonCadastrar, .buttonVoltar {
+      color: white;
+      font-weight: bold;
+      padding: 0.75rem 1rem;
+      font-size: 0.95rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      width: 100%;
+      max-width: 220px;
+    }
+
+    .buttonCadastrar {
+      background-color: #001a3d;
+      &:hover {
+        background-color: #003366;
+      }
+    }
+
+    .buttonVoltar {
+      background-color: #777;
+      &:hover {
+        background-color: #555;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .mainCadastro {
+    flex-direction: column;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .containerImagem {
+    width: 100%;
+    height: 30vh;
+  }
+
+  .containerForms {
+    width: 100%;
+    height: auto;
+    min-height: 70vh;
+    justify-content: flex-start;
+    padding: 1.5rem;
+  }
+
+  .containerForms h1 {
+    font-size: 1.6rem;
+  }
+
+  .containerForms p {
+    font-size: 0.85rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .formCadastro {
+    width: 90%;
+    gap: 0.7rem;
+
+    input {
+      padding: 0.7rem;
+      font-size: 0.9rem;
+    }
+  }
+}
